@@ -48,6 +48,23 @@
                     statusline.lualine.enable = true;
                     autocomplete.nvim-cmp.enable = true;
                     telescope.enable = true;
+                    options.conceallevel = 2;
+                    lazy.plugins = {
+                      "harpoon2" = {
+                        package = pkgs.vimPlugins.harpoon2;
+                        setupModule = "harpoon";
+                      };
+                      "obsidian.nvim" = {
+                        package = pkgs.vimPlugins.obsidian-nvim;
+                        setupModule = "obsidian";
+                        setupOpts = {
+                          workspaces = [{
+                            name = "docs";
+                            path = "~/docs/";
+                          }];
+                        };
+                      };
+                    };
                   };
                 }
               ];
