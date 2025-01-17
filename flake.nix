@@ -45,15 +45,22 @@
                       python.enable = true;
                       markdown.enable = true;
                     };
+                    ui = {
+                      borders.enable = true;
+                      illuminate.enable = true;
+                    };
+                    comments = {
+                      comment-nvim.enable = true;
+                    };
                     statusline.lualine.enable = true;
                     autocomplete.nvim-cmp.enable = true;
                     telescope.enable = true;
                     options.conceallevel = 2;
+                    startPlugins = with pkgs.vimPlugins; [
+                      nvim-cmp
+                      plenary-nvim
+                    ];
                     lazy.plugins = {
-                      "plenary.nvim" = {
-                        package = pkgs.vimPlugins.plenary-nvim;
-                        setupModule = "plenary";
-                      };
                       "harpoon2" = {
                         package = pkgs.vimPlugins.harpoon2;
                         setupModule = "harpoon";
