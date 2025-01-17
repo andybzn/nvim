@@ -50,6 +50,10 @@
                     telescope.enable = true;
                     options.conceallevel = 2;
                     lazy.plugins = {
+                      "plenary.nvim" = {
+                        package = pkgs.vimPlugins.plenary-nvim;
+                        setupModule = "plenary";
+                      };
                       "harpoon2" = {
                         package = pkgs.vimPlugins.harpoon2;
                         setupModule = "harpoon";
