@@ -73,7 +73,7 @@
                           workspaces = [
                             {
                               name = "docs";
-                              path = "~/docs/";
+                              path = "~/vaults/docs/";
                             }
                             {
                               name = "work";
