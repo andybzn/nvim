@@ -70,13 +70,37 @@
                         package = pkgs.vimPlugins.obsidian-nvim;
                         setupModule = "obsidian";
                         setupOpts = {
-                          workspaces = [{
-                            name = "docs";
-                            path = "~/docs/";
-                          }];
+                          workspaces = [
+                            {
+                              name = "docs";
+                              path = "~/docs/";
+                            }
+                            {
+                              name = "work";
+                              path = "~/vaults/work";
+                            }
+                          ];
+                        };
+                      };
+                      "no-neck-pain.nvim" = {
+                        package = pkgs.vimPlugins.no-neck-pain-nvim;
+                        setupModule = "no-neck-pain";
+                        setupOpts = {
+                          buffers = {
+                            wo = {
+                              fillchars = "eob: ";
+                            };
+                          };
                         };
                       };
                     };
+                    keymaps = [
+                      {
+                        key = "<leader>nn";
+                        mode = "n";
+                        action = "<cmd>NoNeckPain<CR>";
+                      }
+                    ];
                   };
                 }
               ];
