@@ -80,6 +80,7 @@
                               path = "~/vaults/work";
                             }
                           ];
+                          notes_subdir = "notes";
                         };
                       };
                       "no-neck-pain.nvim" = {
@@ -99,6 +100,11 @@
                         key = "<leader>nn";
                         mode = "n";
                         action = "<cmd>NoNeckPain<CR>";
+                      }
+                      {
+                        key = "<leader>td";
+                        mode = "n";
+                        action = "<cmd>ObsidianToday<CR>";
                       }
                     ];
                   };
