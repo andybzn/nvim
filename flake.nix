@@ -41,10 +41,12 @@
                       go.enable = true;
                       ts.enable = true;
                       nix.enable = true;
+                      hcl.enable = true;
                       rust.enable = true;
                       clang.enable = true;
                       python.enable = true;
                       markdown.enable = true;
+                      terraform.enable = true;
                     };
                     ui = {
                       borders.enable = true;
