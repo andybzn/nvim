@@ -34,6 +34,7 @@
                       enable = true;
                       name = "catppuccin";
                       style = "macchiato";
+                      transparent = true;
                     };
                     languages = {
                       enableLSP = true;
